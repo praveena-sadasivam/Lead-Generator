@@ -76,11 +76,31 @@ def get_location(text : str)-> list:
 
     return com_loc_list
 
+def save_to_json(filename : str ,json_dict : dict)-> None:
+    with open(filename, "w") as file_object:
+        #write all the entites data in json
+        file_object.write(json.dumps(json_dict, sort_keys=False, indent=2, separators=(',', ': ')))
+    return None
+
+def json_to_csv_file(json_filename  : str ,csv_filename : str)-> None:
+    with open(json_filename) as json_file: 
+        data = json.load(json_file)
+    data_file = open(csv_filename, 'w')
+    csv_writer = csv.writer(data_file)
+    
+    for item in data:
+        csv_writer.writerow(item)
+    # create the csv writer object 
+    # csv_writer = csv.writer(data_file) 
+
+
 #url
 url="http://www.econtentmag.com/Articles/Editorial/Feature/The-Top-100-Companies-in-the-Digital-Content-Industry-The-2016-2017-EContent-100-114156.htm"
 
 #calling function to get page_html
 page_html=get_webpage(url)
+filename='data.json'
+
 # print(page_html)
 
 # #calling function to get webpage visible text
@@ -92,10 +112,14 @@ page_html=get_webpage(url)
 #print(get_contact_page_link(page_html))
 # to get list conataining company name and contact url
 comName_contactUrl_list=get_contact_page_link(page_html)
-
+comp_dict=[]
 for company in comName_contactUrl_list:
      
      name=company[0]
      url=company[1]
      text=get_webpage_text(url)
      loction_list=get_location(text)
+     comp_dict[name]=loction_list
+save_to_json(filename,comp_dict)
+json_to_csv_file(json_filename csv_filename)
+    
