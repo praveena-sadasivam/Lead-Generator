@@ -3,9 +3,12 @@ import requests
 
 #function to get html content of web page using requests module
 def get_webpage(url : str )-> str:
-    response = requests.get(url)
-    page_html=response.text
-    return page_html
+    try:
+        response = requests.get(url)
+        page_html=response.text
+        return page_html
+    except:
+        return None
 
 #function to get visible text from each page using beautiful soup module
 def get_webpage_text(html : str )-> str:
