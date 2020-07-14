@@ -5,11 +5,11 @@ import csv
 import re
 import usaddress
 import logging
-from get_address import get_address_list
+from regex_expression import patterns
 
 
 #function to get html content using urllib module 
-def get_webpage(url : str )-> str:
+def get_webpage(url : str )-> str or None:
     try:
         # Getting the webpage, creating a Response object.
         response = urllib.request.Request(url, headers= {'User-Agent' : 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36'})
@@ -71,10 +71,17 @@ def get_contact_page_link(html : str )-> list:
 
 #function to get address of each company using regex expression
 def get_location(text : str)-> list:
-    location_list=[]
-    address_list=get_address_list(text)
-    location_list=[item for item in address_list if item not in location_list]
-    return location_list
+    address_list=[]
+    for pattern in patterns:
+        find = re.findall(pattern,page_text.strip(), flags = re.MULTILINE)
+        for item in find:
+            item= re.sub(r'[^\x00-\x7f]',' ', item)
+            item= re.sub(r'\n|\t|\r',' ', item)
+            if len(item)>4:
+                 address_list.append(item)
+    address_list=list(dict.fromkeys(address_list))
+    
+    return address_list
 
 #function to store address in json file
 def save_to_json(filename : str ,json_dict : dict)-> None:
@@ -175,6 +182,7 @@ if __name__ == '__main__':
     
     print("now getting address of few companies :")
     print("\n\n")
+    #taking a list of companies that has proper contact page link and located in USA,Since usaddress module will be used for parsing address
     contact_link_list=[["Acquire Media","http://acquiremedia.com/contactus/"],["Apple, Inc.","https://www.apple.com/contact/"],["Aptara, Inc.","https://www.aptaracorp.com/about-aptara/contact-us"],["Act-On Software","https://act-on.com/contact-us/"],["Acquia, Inc","https://www.acquia.com/about-us/contact"],["Acrolinx GmbH","https://www.acrolinx.com/contact/"],["Zoomin","https://www.zoominsoftware.com/contact-us/"],["Wochit","https://www.wochit.com/contact/"]]    
     final_dict={}
     for item in contact_link_list:
@@ -201,5 +209,3 @@ if __name__ == '__main__':
     filename="company_details.json"
     save_to_json(filename,final_dict)
     json_to_csv_file(filename,"company_details.csv")
-
-        
