@@ -1,0 +1,77 @@
+STATE,No. of companies
+AZ,1
+COMPANY,ADDRESS,STATE,ZIP/PIN
+Acquire Media," Kierland BlvdSuite 320Scottsdale, AZ 85254",AZ,85254
+ 
+STATE,No. of companies
+CA,4
+COMPANY,ADDRESS,STATE,ZIP/PIN
+"Apple, Inc.","   Cupertino, CA 95014",CA,95014
+"Apple, Inc.","Apple One Apple Park Way      Cupertino, CA 95014",CA,95014
+"Acquia, Inc","Suite 235 Santa Clara, CA 95050",CA,95050
+"Acquia, Inc","Santa Clara, CA 451 El Camino Real Suite 235 Santa Clara, CA 95050 United States",CA,95050
+ 
+STATE,No. of companies
+FL,2
+COMPANY,ADDRESS,STATE,ZIP/PIN
+Acquire Media,"North Wickham RoadSuite 111Melbourne, FL 32940",FL,32940
+Acquire Media,"Knights Run AvenueSuite 940Tampa, FL 33602",FL,33602
+ 
+STATE,No. of companies
+MA,6
+COMPANY,ADDRESS,STATE,ZIP/PIN
+"Aptara, Inc."," Suite 301 Newton, MA 02458",MA,02458
+"Aptara, Inc.","150 California Street, Suite 301 Newton, MA 02458",MA,02458
+"Acquia, Inc"," 10th Floor Boston, MA 02109",MA,02109
+"Acquia, Inc","53 State Street, 10th Floor Boston, MA 02109 United States",MA,02109
+Acrolinx GmbH,"Suite 240  Waltham, MA 02451",MA,02451
+Acrolinx GmbH,"Waltham, MA 02451  United States",MA,02451
+ 
+STATE,No. of companies
+MI,1
+COMPANY,ADDRESS,STATE,ZIP/PIN
+Acquire Media,"Parkland PlazaSuite BAnn Arbor, MI 48103",MI,48103
+ 
+STATE,No. of companies
+MN,3
+COMPANY,ADDRESS,STATE,ZIP/PIN
+Acquire Media,"HQ7900 International DriveSuite 800Bloomington, MN 55425",MN,55425
+Acquire Media,"Headquarters7900 International DriveSuite 800Bloomington, MN 55425",MN,55425
+Acquire Media,"0662Minnesota1652 Greenview DriveSuite 220Rochester, MN 55902",MN,55902
+ 
+STATE,No. of companies
+NJ,1
+COMPANY,ADDRESS,STATE,ZIP/PIN
+Acquire Media,"Becker Farm RdSuite 401Roseland, NJ 07068",NJ,07068
+ 
+STATE,No. of companies
+NY,3
+COMPANY,ADDRESS,STATE,ZIP/PIN
+Zoomin,"17th Floor New York, NY 10001",NY,10001
+Zoomin," 150 West 28th St, 17th Floor New York, NY 10001",NY,10001
+Wochit,"12 E. 33rd St. New York, NY 10016 USA",NY,10016
+ 
+STATE,No. of companies
+OR,2
+COMPANY,ADDRESS,STATE,ZIP/PIN
+Act-On Software,"121 SW Morrison St.Suite 1600Portland, OR 97204",OR,97204
+"Acquia, Inc"," Suite 550 Portland, OR 97209",OR,97209
+ 
+STATE,No. of companies
+TX,3
+COMPANY,ADDRESS,STATE,ZIP/PIN
+Acquire Media,"1960 Road WestSuite 503Houston, TX 77069",TX,77069
+"Acquia, Inc","600 Congress Ave Austin, TX 78701",TX,78701
+"Acquia, Inc","Austin, Texas 600 Congress Ave Austin, TX 78701 United States",TX,78701
+ 
+STATE,No. of companies
+UT,1
+COMPANY,ADDRESS,STATE,ZIP/PIN
+Acquire Media,"400 West Suite 100Lindon, UT 84042",UT,84042
+ 
+STATE,No. of companies
+VA,2
+COMPANY,ADDRESS,STATE,ZIP/PIN
+"Aptara, Inc.","Suite 522 Falls Church, VA 22042",VA,22042
+"Aptara, Inc.","2901 Telestar Court, Suite 522 Falls Church, VA 22042",VA,22042
+ 
