@@ -3,7 +3,6 @@ from bs4 import BeautifulSoup
 import json
 import csv
 import re
-import usaddress
 import logging
 from regex_expression import patterns1,patterns2
 from contact_list import contact_link_list
